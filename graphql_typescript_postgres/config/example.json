@@ -1,0 +1,4 @@
+{
+  "CONNECTION_STRING": "postgresql://postgres:<password>@localhost:<port>/<DataBase_name>",
+  "JWT_SECRET": "your jwt secret"
+}
