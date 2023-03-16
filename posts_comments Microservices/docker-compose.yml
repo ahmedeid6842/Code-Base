@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  client:
+   build: './client'
+   ports:
+     - 3000:3000
+  comment:
+   build: './comment'
+   ports:
+     - 4001:4001
+  event-bus:
+   build: './event-bus'
+   ports:
+     - 4005:4005
+  moderation:
+   build: './moderation'
+   ports:
+     - 4003:4003
+  post:
+   build: './post'
+   ports:
+     - 4000:4000
+  query: 
+   build: './query'
+   depends_on:
+     - event-bus
+   ports:
+     - 4002:4002
