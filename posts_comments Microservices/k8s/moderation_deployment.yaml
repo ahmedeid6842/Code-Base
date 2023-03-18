@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: moderations-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: moderations
+  template:
+    metadata:
+      name: moderations
+      labels:
+        app: moderations
+    spec:
+      containers:
+        - name: moderations
+          image: ahmedeid6842/moderation
+    
+    

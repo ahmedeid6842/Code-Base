@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: queries-depl
+spec:
+  selector:
+    matchLabels:
+      app: queries
+  template:
+    metadata:
+      name: queries
+      labels:
+        app: queries
+    spec:
+      containers:
+        - name: queries
+          image: ahmedeid6842/query
+    

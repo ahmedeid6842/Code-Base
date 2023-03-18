@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comments-depl
+spec:
+  selector:
+    matchLabels:
+      app: comments
+  template:
+    metadata:
+      name: comments
+      labels:
+        app: comments
+    spec:
+      containers:
+        - name: comments
+          image: ahmedeid6842/comment

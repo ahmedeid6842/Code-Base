@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clients-depl
+spec:
+  selector:
+    matchLabels:
+      app: clients
+  template:
+    metadata:
+      name: clients
+      labels:
+        app: clients
+    spec:
+      containers:
+        - name: clients
+          image: ahmedeid6842/client
+    
+    

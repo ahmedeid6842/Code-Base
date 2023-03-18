@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: posts-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: posts
+  template:
+    metadata:
+      name: posts
+      labels:
+        app: posts
+    spec:
+      containers:
+        - name: posts
+          image: ahmedeid6842/post
+    
+    
