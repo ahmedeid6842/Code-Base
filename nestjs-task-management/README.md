@@ -1,3 +1,5 @@
+<h1 align="center"> NestJS Task Management </h1>
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
@@ -5,69 +7,82 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+  <p align="center">This is a task management backend application developed as part of the "NestJS Zero to Hero - Modern TypeScript Back-end Development" Udemy course by Ariel Weinberger.</p>
     <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+<a href="https://www.linkedin.com/in/ameid/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/><a>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Acknowledgement](#acknowledgement)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+The NestJS Task Management application is a powerful backend solution for managing tasks. It provides a secure and scalable architecture built with NestJS and TypeScript. The application includes features such as user authentication, task creation, updating, and deletion, as well as task filtering and sorting.
 
 ## Installation
 
-```bash
-$ npm install
+To run the NestJS Task Management application locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/ahmedeid6842/Code-Base.git
+   ```
+
+1. Navigate to the project directory:
+
+   ```bash
+   cd Code-Base/nestjs-course-task-management
+   ```
+
+1. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+   
+1. Run the application:
+
+   ```bash
+   npm run start:dev
+   ```
+
+The application will be accessible at `http://localhost:3000`.
+
+## Usage
+
+Once the application is up and running, you can use the following endpoints to interact with the API:
+
+- **POST /auth/signup**: Create a new user account.
+- **POST /auth/signin**: Authenticate and obtain an access token.
+- **GET /tasks**: Get a list of tasks.
+- **GET /tasks/:id**: Get a specific task.
+- **POST /tasks**: Create a new task.
+- **PATCH /tasks/:id**: Update a task.
+- **DELETE /tasks/:id**: Delete a task.
+
+Make sure to include the access token in the request headers for authenticated endpoints:
+
+```
+Authorization: Bearer <access_token>
 ```
 
-## Running the app
+## Acknowledgement
 
-```bash
-# development
-$ npm run start
+Special thanks to [Ariel Weinberger](https://github.com/arielweinberger) for his NestJS course, which was an invaluable resource in building this project.
 
-# watch mode
-$ npm run start:dev
+## Contributing
 
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Contributions to the NestJS Task Management project are welcome. If you find a bug or have suggestions for improvements, please open an issue or submit a pull request. Ensure that you follow the project's code of conduct.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the `LICENSE` file for more information.
+
