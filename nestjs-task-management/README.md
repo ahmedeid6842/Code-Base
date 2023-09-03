@@ -74,6 +74,34 @@ Make sure to include the access token in the request headers for authenticated e
 Authorization: Bearer <access_token>
 ```
 
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant A as AuthController
+    participant AS as AuthService
+    participant UR as UserRepository
+    participant DB as Database
+    
+    C->>A: POST /auth/signup {user data}
+    A->>AS: signUp(user)
+    AS->>UR: createUser(user)
+    UR->>DB: Save user
+    DB-->>UR: User saved  
+    UR-->>AS: User created
+    AS-->>A:  
+    A-->>C: 201 Created
+    
+    C->>A: POST /auth/signin {username, password}
+    A->>AS: signIn(username, password)
+    AS->>UR: findUser(username)
+    UR->>DB: Find user
+    DB-->>UR: User
+    UR-->>AS: User
+    AS->>AS: Validate password
+    AS-->>A: accessToken
+    A-->>C: 200 OK {accessToken}
+```
+
 ## Acknowledgement
 
 Special thanks to [Ariel Weinberger](https://github.com/arielweinberger) for his NestJS course, which was an invaluable resource in building this project.
@@ -85,4 +113,8 @@ Contributions to the NestJS Task Management project are welcome. If you find a b
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the `LICENSE` file for more information.
+
+
+
+
 
